@@ -22,7 +22,7 @@ Booleans | bool | Logical value indicating True or False
 * We generally want to keep variable names in lowercase
 * Python uses Dynamic Typing which reassigns variables to different datatypes
 
- | Dynamic Typing | Static Typing
+ Case | Dynamic Typing | Static Typing
 --- | --- | ---
 Before | my_dog = 1 | int my_dog = 1
 After | my_dog = "hello" | my_dog = "hello" // Error!

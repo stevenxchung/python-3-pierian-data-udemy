@@ -142,3 +142,91 @@ newlist = [1, 4, 3, 2]
 newlist.sort() # [1, 2, 3, 4]
 newlist.reverse() # [4, 3, 2, 1]
 ```
+
+## Dictionaries in Python
+
+Dictionaries are unordered mappings for storing objects. Previously we saw how lists store objects in an ordered sequence, dictionaries use a key-value pairing instead.
+
+When to choose a list and when to choose a dictionary?
+* Use a dictionary when you want to retrieve data fast and are not concerned about location (cannot perform sort, index, or slice)
+* Use a list when you want to sort, index, or slice data
+
+```python
+prices = {"apple" : 1.99, "oranges" : 2.99, "milk", 3.99}
+prices["apple"] # 1.99
+prices["oranges"] # 2.99
+prices["milk"] # 3.99
+```
+
+## Tuples with Python
+
+Tuples are similar to lists. However, unlike lists, Tuples are **immutable** - the values stored inside of a tuple cannot be changed
+
+Why would you want to use a tuple if they function as a list with less features?
+* Because in some cases you may want to keep certain variables the same, in this case you would want to use a tuple
+
+There are only two methods with tuples:
+
+```python
+t = (1, 2, 3)
+t.count(1) # 1
+t.index(1) # 0
+```
+
+## Sets in Python
+
+Sets are unordered collections of unique elements:
+
+```python
+newset = set()
+newset.add(1)
+newset # {1}
+newset.add(2)
+newset # {1, 2}
+newlist = [1, 1, 1, 2, 2, 2, 3, 3, 3]
+set(newlist) # {1, 2, 3}
+```
+
+## Booleans in Python
+
+Booleans are operators that allow you to convey **True** or **False** statements
+
+```python
+(1 + 1) == 2 # True
+(1 + 1) == 1 # False
+```
+
+## I/O with Basic Files in Python
+
+This subsection covers input and output on Jupyter Notebooks:
+
+```python
+%%writefile myfile.txt
+Hello this is a text file
+This is the second line
+This is the third line
+
+myfile = open("myfile.txt") # Opens file
+
+myfile.read() # Reads file and returns everything from that file into one string
+myfile.read() # Returns nothing because file has already been read
+myfile.seek(0) # Returns reader head to the beginning of the file
+myfile.read() # Now it prints your text file as a string like before
+myfile.seek(0)
+myfile.readlines() # Prints text file with each line stored in a list
+
+# Below is a cleaner way to open and read files
+with open("myfile.txt") as my_new_file:
+  contents = my_new_file.read()
+
+# Additionally, we can add the permissions when opening a file by changing the mode
+with open("myfile.txt", mode='r') as my_new_file: # Read only mode
+  contents = my_new_file.read()
+```
+
+There are many different modes you can open a file with:
+* mode='r' is read only
+* mode='w' is write only (will overwrite files or create new)
+* mode='a' is append only (will only add on to files)
+* mode='r+' is reading and writing
+* mode='w+' is writing and reading (overwrites existing files or creates a new file)

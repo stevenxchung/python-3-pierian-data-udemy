@@ -13,7 +13,7 @@ Operator | Description
 >= | If the value of left operand is greater than or equal to the value of right operand, then condition becomes true
 <= | If the value of left operand is less than or equal to the value of right operand, then condition becomes true
 
-# Chaining Comparison Operators
+## Chaining Comparison Operators
 
 There are several keywords used to chain comparison operators:
 * When using the *and* keyword, both statements have to be true.

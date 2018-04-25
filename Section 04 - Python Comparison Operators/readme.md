@@ -1,4 +1,4 @@
-# Section  Notes
+# Section 4 Notes
 
 This section covers comparison operators in python.
 
@@ -16,7 +16,7 @@ Operator | Description
 # Chaining Comparison Operators
 
 There are several keywords used to chain comparison operators:
-* When using the *and* keyword, both statments have to be true.
+* When using the *and* keyword, both statements have to be true.
 * When using the *or* keyword, either statements can be true
 
 Additionally, we have a *not* keyword which returns the opposite of the expected result:

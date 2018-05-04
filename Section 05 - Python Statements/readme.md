@@ -178,7 +178,8 @@ result = input("What is your age?")
 
 ## List Comprehensions in Python
 
-List comprehensions are a unique way of quickly creating a list with python. They are a good alternative to using a for loop with .append() to create a list.
+List comprehensions are a unique way of quickly creating a list with python.
+They are a good alternative to using a for loop with .append() to create a list.
 
 ```python
 # Standard append to array using for loop

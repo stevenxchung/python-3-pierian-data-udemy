@@ -70,3 +70,45 @@ def pig_latin(word):
 pig_latin("word") # "ordway"
 pig_latin("apple") # "appleay"
 ```
+
+## *args and *kwargs in Python
+
+* *agrs - arguments
+* **kwargs - keyword arguments
+
+We want a way to accept an arbitrary number of *args and **kwargs
+
+```python
+def myfunc(a, b):
+  # Returns 5% of the sum of a and b
+  return sum((a, b)) * 0.05
+
+myfunc(40, 60) # 5.0
+```
+
+In the example above, myfunc() only takes in 2 positional arguments. How do we make this work for n arguments?
+
+```python
+def myfunc(*args):
+  # Returns 5% of the sum of n arguments
+  return sum(args) * 0.05
+```
+
+How do we do this for dictionaries?
+
+```python
+def myfunc(**kwargs):
+  if "fruit" in kwargs:
+    print("My fruit of choice is {}". format(kwargs["fruit"]))
+  else:
+    print("I did not find my fruit here")
+```
+
+We can also pass in both *args and **kwargs:
+
+```python
+def myfunc(**args, **kwargs):
+  print(args)
+  print(kwargs)
+  print("I would like {} {}".format(args[0], kwargs["food"]))
+```

@@ -112,3 +112,18 @@ def myfunc(**args, **kwargs):
   print(kwargs)
   print("I would like {} {}".format(args[0], kwargs["food"]))
 ```
+## Lambda Expressions, Map, and Filter Functions
+
+Lambda expressions are used only once and typically do not have a name. Lambda expressions are also known as anonymous functions as they do not have a name.
+
+The [map](http://book.pythontips.com/en/latest/map_filter.html) function takes another function and applies it to some element(s).
+
+The [filter](http://book.pythontips.com/en/latest/map_filter.html) function creates a list of elements for which a function returns true.
+
+## Nested Statements and Scope
+
+LEGB Rule:
+* L: Local - Names assigned in any way within a function (def or lambda), and not declared in that function.
+* E: Enclosing function locals - Names in the local scope of any and all enclosing functions (def or lambda), from inner to outer.
+* G: Global (module) - Names assigned at the top-level of a module file, or declared gloabl in a def within the file.
+* B: Built-in (Python) - Names preassigned in the built-in names module: open, range, SyntaxError,...
